@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  margin: 0;
+}
+body #colorName {
+  font-size: 3em;
+}
+body #colorName p {
+  position: absolute;
+  right: 1em;
+  margin-top: 0;
+  text-justify: right;
+}
+
+nav img {
+  width: 10vw;
+}
+nav ul {
+  padding: 0;
+  position: relative;
+}
+nav ul.shown {
+  left: 0;
+  transition-duration: 1000ms;
+}
+nav ul.hidden {
+  left: -22vw;
+  transition-duration: 1000ms;
+}
+nav ul li {
+  list-style-type: none;
+  width: 20vw;
+  height: 3vw;
+  display: flex;
+  flex: column;
+  font-size: 2vw;
+  padding-top: 0.5em;
+  padding-left: 1em;
+}
+nav ul li.Red {
+  background-color: red;
+}
+nav ul li.Orange {
+  background-color: orange;
+}
+nav ul li.Purple {
+  background-color: purple;
+}
+nav ul li.Green {
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

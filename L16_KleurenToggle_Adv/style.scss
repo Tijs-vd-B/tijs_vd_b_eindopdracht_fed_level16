@@ -1,0 +1,53 @@
+body {
+  display: flex;
+  margin: 0;
+  #colorName {
+    font-size: 3em;
+    & p {
+      position: absolute;
+      right: 1em;
+      margin-top: 0;
+      text-justify: right;
+    }
+  }
+}
+nav {
+  & img {
+    width: 10vw;
+  }
+  & ul {
+    padding: 0;
+    position: relative;
+    &.shown {
+      left: 0;
+      transition-duration: 1000ms;
+    }
+    &.hidden {
+      left: -22vw;
+      transition-duration: 1000ms;
+      // visibility: hidden;
+    }
+    & li {
+      list-style-type: none;
+      width: 20vw;
+      height: 3vw;
+      display: flex;
+      flex: column;
+      font-size: 2vw;
+      padding-top: 0.5em;
+      padding-left: 1em;
+      &.Red {
+        background-color: red;
+      }
+      &.Orange {
+        background-color: orange;
+      }
+      &.Purple {
+        background-color: purple;
+      }
+      &.Green {
+        background-color: green;
+      }
+    }
+  }
+}

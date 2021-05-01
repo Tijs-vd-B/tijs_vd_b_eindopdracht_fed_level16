@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: sans-serif;
+}
+nav {
+  & img {
+    width: 3em;
+  }
+  & ul {
+    padding: 0;
+    position: relative;
+    &.hidden {
+      left: -10em;
+      transition-duration: 1000ms;
+      // visibility: hidden;
+    }
+    &.shown {
+      left: 0;
+      transition-duration: 1000ms;
+    }
+    & li {
+      list-style-type: none;
+      width: 9em;
+      height: 1.5em;
+      font-size: 1em;
+      padding-top: 0.5em;
+      padding-left: 1em;
+      cursor: pointer;
+      &.Red {
+        background-color: red;
+      }
+      &.Orange {
+        background-color: orange;
+      }
+      &.Purple {
+        background-color: purple;
+      }
+      &.Green {
+        background-color: green;
+      }
+    }
+  }
+}
+#colorName {
+  font-size: 3em;
+  & p {
+    position: absolute;
+    right: 1em;
+    margin-top: 0;
+    text-justify: right;
+  }
+}
+//'radio-buttons' https://dev.to/gscode/10-radio-button-css-style-examples-ph6
+$colors: (
+  None: white,
+  Red: red,
+  Orange: orange,
+  Purple: purple,
+  Green: green,
+);
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  gap: 0.7em;
+  position: absolute;
+  right: 0;
+  input[type="radio"] {
+    display: none;
+    &:checked + label {
+      span {
+        transform: scale(1.25);
+      }
+      @each $name, $value in $colors {
+        .#{$name} {
+          border: 2px solid darken($value, 25%);
+        }
+      } // !@each
+    } // !&:checked + label
+  }
+}
+label {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  &:hover {
+    span {
+      transform: scale(1.25);
+    }
+  }
+  span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease-in-out;
+    @each $name, $value in $colors {
+      &.#{$name} {
+        background: $value;
+      }
+    }
+  }
+}

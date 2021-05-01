@@ -1,0 +1,35 @@
+body {
+  display: flex;
+}
+body h1 {
+  font-size: 10vw;
+}
+
+nav img {
+  width: 10vw;
+}
+nav ul.hidden {
+  visibility: hidden;
+}
+nav ul li {
+  list-style-type: none;
+  width: 30vw;
+  height: 3vw;
+  display: flex;
+  flex: column;
+  font-size: 2vw;
+  padding-top: 0.5em;
+  padding-left: 1em;
+}
+nav ul li.Red {
+  background-color: red;
+}
+nav ul li.Orange {
+  background-color: orange;
+}
+nav ul li.Purple {
+  background-color: purple;
+}
+nav ul li.Green {
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

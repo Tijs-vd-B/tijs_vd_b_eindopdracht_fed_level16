@@ -1,0 +1,114 @@
+body {
+  display: flex;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+nav img {
+  width: 3em;
+}
+nav ul {
+  padding: 0;
+  position: relative;
+}
+nav ul.hidden {
+  left: -10em;
+  transition-duration: 1000ms;
+}
+nav ul.shown {
+  left: 0;
+  transition-duration: 1000ms;
+}
+nav ul li {
+  list-style-type: none;
+  width: 9em;
+  height: 1.5em;
+  font-size: 1em;
+  padding-top: 0.5em;
+  padding-left: 1em;
+  cursor: pointer;
+}
+nav ul li.Red {
+  background-color: red;
+}
+nav ul li.Orange {
+  background-color: orange;
+}
+nav ul li.Purple {
+  background-color: purple;
+}
+nav ul li.Green {
+  background-color: green;
+}
+
+#colorName {
+  font-size: 3em;
+}
+#colorName p {
+  position: absolute;
+  right: 1em;
+  margin-top: 0;
+  text-justify: right;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5em;
+  gap: 0.7em;
+  position: absolute;
+  right: 0;
+}
+.radio input[type=radio] {
+  display: none;
+}
+.radio input[type=radio]:checked + label span {
+  transform: scale(1.25);
+}
+.radio input[type=radio]:checked + label .None {
+  border: 2px solid #bfbfbf;
+}
+.radio input[type=radio]:checked + label .Red {
+  border: 2px solid maroon;
+}
+.radio input[type=radio]:checked + label .Orange {
+  border: 2px solid #805300;
+}
+.radio input[type=radio]:checked + label .Purple {
+  border: 2px solid #010001;
+}
+.radio input[type=radio]:checked + label .Green {
+  border: 2px solid #000100;
+}
+
+label {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+label:hover span {
+  transform: scale(1.25);
+}
+label span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+label span.None {
+  background: white;
+}
+label span.Red {
+  background: red;
+}
+label span.Orange {
+  background: orange;
+}
+label span.Purple {
+  background: purple;
+}
+label span.Green {
+  background: green;
+}/*# sourceMappingURL=style.css.map */
